@@ -46,7 +46,7 @@ infra_log/
 - static/
 - - js/
 - - power.js # Frontend logic
-- -README.md # This file
+- README.md # This file
 
 
 ## 🚀 Installation
