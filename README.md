@@ -64,45 +64,48 @@ infra_log/
    cd infra_log_powersupply
 2. **Install dependencies**
      ```bash
-pip install flask flask-httpauth
+   pip install flask flask-httpauth
 
 4. **Configure users (optional)**
 Edit app.py and modify the users dictionary:
-
-users = {
+   ```bash
+   users = {
     "admin": generate_password_hash("your_password"),
     "user": generate_password_hash("another_password")
-}
+    }
 
 4. **Run the application**
-python app.py
+   ```bash
+   python app.py
 5. **http://localhost:8500**
 
 ## Running as a Service (systemd)
 
 1. **Create a systemd service file**
-sudo nano /etc/systemd/system/infra-log.service
+   ```bash
+   sudo nano /etc/systemd/system/infra-log.service
 2. **Add the following content**
+   ```bash
+   [Unit]
+   Description=Infrastructure Log App
+   After=network.target
 
-[Unit]
-Description=Infrastructure Log App
-After=network.target
+   [Service]
+   User=your_username          # Change this to your actual username
+   WorkingDirectory=/path/to/infra_log_powersupply  # Change to your actual path
+   ExecStart=/usr/bin/python3 /path/to/infra_log_powersupply/app.py  # Change path
+   Restart=always
+   RestartSec=10
 
-[Service]
-User=your_username          # Change this to your actual username
-WorkingDirectory=/path/to/infra_log_powersupply  # Change to your actual path
-ExecStart=/usr/bin/python3 /path/to/infra_log_powersupply/app.py  # Change path
-Restart=always
-RestartSec=10
-
-[Install]
-WantedBy=multi-user.target
+   [Install]
+   WantedBy=multi-user.target
 
 3. **Enable and start the service**
-sudo systemctl daemon-reload
-sudo systemctl enable infra-log.service
-sudo systemctl start infra-log.service
-sudo systemctl status infra-log.service
+   ```bash
+   sudo systemctl daemon-reload
+   sudo systemctl enable infra-log.service
+   sudo systemctl start infra-log.service
+   sudo systemctl status infra-log.service
 
 ## 📖 Usage Guide
 
