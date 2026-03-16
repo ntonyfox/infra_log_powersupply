@@ -39,14 +39,14 @@ Infrastructure Log is an internal web service designed to track and visualize po
 ## 📁 Project Structure
 
 infra_log/
-── app.py # Main Flask application
-── server_data.json # Data storage (auto-generated)
-── templates/
-──── power.html # Web interface
-── static/
-──── js/
-──── power.js # Frontend logic
-── README.md # This file
+- app.py # Main Flask application
+- server_data.json # Data storage (auto-generated)
+- templates/
+- - power.html # Web interface
+- static/
+- - js/
+- - power.js # Frontend logic
+- -README.md # This file
 
 
 ## 🚀 Installation
@@ -139,6 +139,7 @@ DEFAULT_EXTRA_LOADS = [
     {"name": "Additional load 1 (1A) - modify in code if needed", "value": 1.0, "enabled": True},
     {"name": "Additional load 2 (1A) - modify in code if needed", "value": 1.0, "enabled": True}
 ]
+```
 
 ## 🔧 Configuration
 
