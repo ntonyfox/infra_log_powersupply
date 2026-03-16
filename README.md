@@ -150,26 +150,26 @@ DEFAULT_EXTRA_LOADS = [
 
 ### Users and Passwords
 Edit the users dictionary in app.py:
-
+   ```bash
 users = {
     "admin": generate_password_hash("admin123"),
     "user": generate_password_hash("user123"),
     "guest": generate_password_hash("guest123")
 }
-
+   ```
 ### Default Servers
 Modify the DEFAULT_SERVERS list in app.py to change initial data:
-
+   ```bash
 DEFAULT_SERVERS = [
     {"name": "Test_Server_1", "boot": {"amps": 1.5, "watts": 330}, "work": {"amps": 0.8, "watts": 176}},
     # ... more servers
 ]
-
+   ```
 ### Port Number
 Change the port in the last line of app.py:
-
+   ```bash
 app.run(host='0.0.0.0', port=8500, debug=False)
-
+   ```
 ## 🎨 Color Code Reference
 
 | Color | Range | Meaning |
