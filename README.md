@@ -63,8 +63,10 @@ infra_log/
    git clone https://github.com/ntonyfox/infra_log_powersupply.git
    cd infra_log_powersupply
 2. **Install dependencies**
+     ```bash
 pip install flask flask-httpauth
-3. **Configure users (optional)**
+
+4. **Configure users (optional)**
 Edit app.py and modify the users dictionary:
 
 users = {
