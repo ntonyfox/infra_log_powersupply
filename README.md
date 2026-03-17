@@ -2,6 +2,7 @@
 
 <img width="1711" height="641" alt="demopic" src="https://github.com/user-attachments/assets/f17b1bf8-6de5-4ca6-bbf5-ef6360f99f37" />
 *your version will be fully in English
+
 A simple web-based tool for monitoring and managing server power consumption with Boot/Work mode support.
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
