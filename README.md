@@ -9,11 +9,11 @@ A simple web-based tool for monitoring and managing server power consumption wit
 ![Python](https://img.shields.io/badge/python-3.8+-green)
 ![Flask](https://img.shields.io/badge/flask-2.0+-lightgrey)
 
-## 📋 Description
+## Description
 
 Infrastructure Log is an internal web service designed to track and visualize power consumption of servers in a local network. It features real-time calculations, mode switching (Boot/Work), and color-coded overload indicators.
 
-## ✨ Features
+## Features
 
 - **Real-time monitoring** of server power consumption
 - **Dual mode support**: Boot (peak) and Work (normal operation)
@@ -31,7 +31,7 @@ Infrastructure Log is an internal web service designed to track and visualize po
 - **HTTP Basic Authentication** for access control
 - **Persistent storage** in JSON file
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Backend**: Python 3.8+ / Flask
 - **Frontend**: HTML5, CSS3, Vanilla JavaScript
@@ -39,7 +39,7 @@ Infrastructure Log is an internal web service designed to track and visualize po
 - **Storage**: JSON file
 - **Deployment**: systemd service
 
-## 📁 Project Structure
+## Project Structure
 
 infra_log/
 - app.py # Main Flask application
@@ -52,7 +52,7 @@ infra_log/
 - README.md # This file
 
 
-## 🚀 Installation
+## Installation
 
 ### Prerequisites
 
@@ -110,9 +110,9 @@ Edit app.py and modify the users dictionary:
    sudo systemctl start infra-log.service
    sudo systemctl status infra-log.service
 
-## 📖 Usage Guide
+## Usage Guide
 
-### 👁️ View Mode
+### View Mode
 
 | Feature | Description |
 |---------|-------------|
@@ -132,14 +132,14 @@ Edit app.py and modify the users dictionary:
 | **"💾 Save" button** | Persist changes to server |
 | **"Cancel" button** | Discard all changes |
 
-### 📊 Additional Loads
+### Additional Loads
 
 | Load | Default Value | How to Modify |
 |------|---------------|---------------|
 | **Additional load 1** | 1.0 A | Edit `DEFAULT_EXTRA_LOADS` in `app.py` |
 | **Additional load 2** | 1.0 A | Edit `DEFAULT_EXTRA_LOADS` in `app.py` |
 
-> 💡 **Note:** If you have other constant consumers or interference on your line, you can add or modify these values directly in the code. Look for the `DEFAULT_EXTRA_LOADS` array in `app.py`.
+> **Note:** If you have other constant consumers or interference on your line, you can add or modify these values directly in the code. Look for the `DEFAULT_EXTRA_LOADS` array in `app.py`.
 
 Example from `app.py`:
 ```python
@@ -149,7 +149,7 @@ DEFAULT_EXTRA_LOADS = [
 ]
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Users and Passwords
 Edit the users dictionary in app.py:
@@ -173,7 +173,7 @@ Change the port in the last line of app.py:
    ```bash
 app.run(host='0.0.0.0', port=8500, debug=False)
    ```
-## 🎨 Color Code Reference
+## Color Code Reference
 
 | Color | Range | Meaning |
 |-------|-------|---------|
@@ -182,7 +182,7 @@ app.run(host='0.0.0.0', port=8500, debug=False)
 | 🔴 **Red** | 18-20A | Critical - near overload |
 | 🟤 **Burgundy** | > 20A | Overload - exceeds capacity |
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -192,15 +192,15 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📞 Contact
+## Contact
 
 Project Link: [https://github.com/ntonyfox/infra_log_powersupply](https://github.com/ntonyfox/infra_log_powersupply)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Built with Flask and vanilla JavaScript
 - Icons and emojis for better UX
